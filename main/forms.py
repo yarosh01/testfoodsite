@@ -1,6 +1,6 @@
 from django import forms
 
-
+# pomenyat delicion
 class ContactForm(forms.Form):
 
     from_email = forms.EmailField(label='Email', required=True)

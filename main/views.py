@@ -7,27 +7,6 @@ from django.views import View
 from jobtest.settings import DEFAULT_FROM_EMAIL, RECIPIENTS_EMAIL
 from main.forms import ContactForm
 from main.models import Category, Product
-from rest_framework.generics import (ListCreateAPIView,RetrieveUpdateDestroyAPIView,)
-from rest_framework.permissions import IsAuthenticated
-from .models import userProfile
-#from .permissions import IsOwnerProfileOrReadOnly
-from main.api.serializers import userProfileSerializer
-
-
-class UserProfileListCreateView(ListCreateAPIView):
-    queryset=userProfile.objects.all()
-    serializer_class=userProfileSerializer
-    permission_classes=[IsAuthenticated]
-
-    def perform_create(self, serializer):
-        user=self.request.user
-        serializer.save(user=user)
-
-
-class userProfileDetailView(RetrieveUpdateDestroyAPIView):
-    queryset=userProfile.objects.all()
-    serializer_class=userProfileSerializer
-    permission_classes=[IsAuthenticated]
 
 
 class Index(View):
