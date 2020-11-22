@@ -9,22 +9,6 @@
     IMPORT FILES
 -------------------------------------------------------------------*/
 
-@import url(animate.css);
-@import url(font-awesome.min.css);
-@import url(superslides.css);
-@import url(baguetteBox.min.css);
-
-/*------------------------------------------------------------------
-    SKELETON
--------------------------------------------------------------------*/
-
-body {
-    color: #666666;
-    font-size: 15px;
-    font-family: 'Athiti', sans-serif;
-    line-height: 1.80857;
-}
-
 
 a {
     color: #1f1f1f;
@@ -341,14 +325,7 @@ button:focus{
 -------------------------------------------------------------------*/
 
 
-.qt-background{
-	background: url(../images/qt-bg.jpg) no-repeat;
-	background-size: cover;
-	padding: 100px 0;
-	background-attachment: fixed;
-	background-position: center center;
-	position: relative;
-}
+
 .qt-background p {
     font-size: 35px;
     font-weight: 300;
@@ -608,17 +585,7 @@ button:focus{
 	padding-top: 50px;
 	padding-bottom: 0px;
 }
-.bg-f{
-	background-image: url("../images/footer-bg.jpg");
-	background-attachment: scroll;
-	background-clip: initial;
-	background-color: rgba(0, 0, 0, 0);
-	background-origin: initial;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-}
+
 .bg-f::before {
     background: #010101;
     content: "";
@@ -717,16 +684,6 @@ button:focus{
 	margin-right: 10px;
 }
 
-.copyright{
-	margin-top: 20px;
-	position: relative;
-	display: block;
-	background-color: #010101;
-	border-top: 1px dashed rgba(207, 166, 113);
-	padding: 30px 0;
-	z-index: 1;
-}
-
 .copyright .company-name{
 	font-size: 16px;
 	text-align: center;
@@ -739,14 +696,7 @@ button:focus{
     All Pages
 -------------------------------------------------------------------*/
 
-.page-breadcrumb {
-    padding: 250px 0 150px;
-    background: url(../images/all-bg.jpg) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 0 0;
-    position: relative;
-}
+
 .all-page-title .container{
 	position: relative;
 	z-index: 2;

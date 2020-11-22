@@ -38,14 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    # third party package for user registration and authentication endpoints
-    # 'djoser',
-
-    # rest API implementation library for django
     'rest_framework',
-
-    # JWT authentication backend library
-    'rest_framework_simplejwt',
+    'knox',
 ]
 
 MIDDLEWARE = [
@@ -132,6 +126,18 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-RECIPIENTS_EMAIL = ['manager@mysite.com']   # замените на свою почту
-DEFAULT_FROM_EMAIL = 'admin@mysite.com'  # замените на свою почту
+RECIPIENTS_EMAIL = ['*******@gmail.com']   # замените на свою почту
+DEFAULT_FROM_EMAIL = '******@gmail.com'  # замените на свою почту
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = "***"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
+}
